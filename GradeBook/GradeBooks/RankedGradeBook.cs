@@ -22,7 +22,6 @@ namespace GradeBook.GradeBooks
             var sort = Students.OrderByDescending(x => x.AverageGrade).ToList();
             var rank = sort.FindIndex(x => x.AverageGrade == averageGrade) + 1 / divisible;
 
-
             if (rank <= 1)
             {
                 return 'A';
@@ -31,11 +30,11 @@ namespace GradeBook.GradeBooks
             {
                 return 'B';
             }
-            if (rank <= 3)
+            else if (rank <= 3)
             {
                 return 'C';
             }
-            if (rank <= 4)
+            else if (rank <= 4)
             {
                 return 'D';
             }
